@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class main {
-    static List<String> list = new ArrayList<String>();
+    static List<String> list = new ArrayList<>();
+    static int valuea = 0;
+    static int valueb = 0;
+    static int valuec = 0;
 
     private static void loadArray() {
         try {
@@ -17,9 +20,6 @@ public class main {
     }
 
     private static String searchOutOf22020() {
-        loadArray();
-        int valuea = 0;
-        int valueb = 0;
         for (int i = 0; i < list.size(); i++) {
             valuea = Integer.parseInt(list.get(i));
             for (int j = 0; j < list.size(); j++) {
@@ -33,10 +33,6 @@ public class main {
     }
 
     private static String searchOutOf32020() {
-        loadArray();
-        int valuea = 0;
-        int valueb = 0;
-        int valuec = 0;
         for (int i = 0; i < list.size(); i++) {
             valuea = Integer.parseInt(list.get(i));
             for (int j = 0; j < list.size(); j++) {
@@ -53,6 +49,7 @@ public class main {
     }
 
     public static void main(String[] args) {
+        loadArray();
         System.out.println(searchOutOf22020());
         System.out.println(searchOutOf32020());
     }
