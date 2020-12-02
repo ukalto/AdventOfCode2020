@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
-public class main {
+public class Day1 {
     static List<String> list = new ArrayList<>();
     static int valuea = 0;
     static int valueb = 0;
