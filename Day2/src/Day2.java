@@ -14,11 +14,7 @@ public class Day2 {
 
     private static void loadArray() {
         Scanner scanner = null;
-        try {
-            scanner = new Scanner(new File("file.txt"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        scanner = new Scanner(new File("Inputs/Day2.txt").getAbsolutePath());
         scanner.useDelimiter("[ \\r\\n]+");
 
         while (scanner.hasNextLine()) {

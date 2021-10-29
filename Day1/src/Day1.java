@@ -13,7 +13,7 @@ public class Day1 {
 
     private static void loadArray() {
         try {
-            list = Files.readAllLines(new File("file.txt").toPath(), Charset.defaultCharset());
+            list = Files.readAllLines(new File("Inputs/Day1.txt").toPath(), Charset.defaultCharset());
         } catch (IOException e) {
             e.printStackTrace();
         }
