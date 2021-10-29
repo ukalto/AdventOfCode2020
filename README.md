@@ -1,4 +1,4 @@
-# Advent of Code 2020 JAVA
+# Advent of Code 2020 Java
 ### Days
 * [Day 1](https://github.com/ukalto/AdventOfCode2020/tree/master/Day1)
 
