@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Day3 {
     static List<String> list = new ArrayList<>();
-    static int treeCounter = 0;
+    static long treeCounter = 1;
 
     private static void loadArray() {
         try {
@@ -17,15 +17,23 @@ public class Day3 {
         }
     }
 
-    private static int countTrees() {
-        return treeCounter;
+    private static int countTrees(int x, int y) {
+        int treeCount = 0;
+        for (int i = 0, j = 0; i < list.size(); i += y, j += x) {
+            if (list.get(i).charAt(j % list.get(i).length()) == '#')
+                treeCount++;
+        }
+        treeCounter *= treeCount;
+        return treeCount;
     }
 
     public static void main(String[] args) {
         loadArray();
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
-        System.out.println(countTrees());
+        System.out.println(countTrees(1, 1));
+        System.out.println(countTrees(3, 1));
+        System.out.println(countTrees(5, 1));
+        System.out.println(countTrees(7, 1));
+        System.out.println(countTrees(1, 2));
+        System.out.println(treeCounter);
     }
 }
