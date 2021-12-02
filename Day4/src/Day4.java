@@ -54,22 +54,23 @@ public class Day4 {
                 } else if (parts[j].contains("hgt:")) {
                     String x = parts[j].substring(4);
                     String[] y = null;
-                    boolean cm = true;
+                    String measure = "";
                     if (x.contains("in")) {
                         y = x.split("in");
-                        cm = false;
-                    } else {
+                        measure = "in";
+                    } else if (x.contains("cm")) {
                         y = x.split("cm");
+                        measure = "cm";
                     }
-                    int z = Integer.parseInt(y[0]);
-                    if (cm && z >= 150 && z <= 193) {
-                        counter++;
-                    } else if (z >= 59 && z <= 76) {
+                    int z = 0;
+                    if (y != null)
+                        z = Integer.parseInt(y[0]);
+                    if ((measure.equals("cm") && z >= 150 && z <= 193) || (measure.equals("in") && z >= 59 && z <= 76)) {
                         counter++;
                     }
                 } else if (parts[j].contains("hcl:")) {
                     String x = parts[j].substring(5);
-                    if (x.length() == 6)
+                    if (x.length() == 6) {
                         for (int k = 0, z = 0; k < x.length(); k++) {
                             char c = x.charAt(k);
                             if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f'))
@@ -77,6 +78,7 @@ public class Day4 {
                             if (z == 6)
                                 counter++;
                         }
+                    }
                 } else if (parts[j].contains("ecl:")) {
                     String x = parts[j].substring(4);
                     if (validEcl.contains(x))
