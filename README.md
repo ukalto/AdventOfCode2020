@@ -1,12 +1,12 @@
 # Advent of Code 2020 Java
 ### Days
-* [Day 1](https://github.com/ukalto/AdventOfCode2020/tree/master/Day1)
+* [Day 1](https://github.com/ukalto/AdventOfCode2020/blob/master/Day1/Day1.java)
 
-* [Day 2](https://github.com/ukalto/AdventOfCode2020/tree/master/Day2)
+* [Day 2](https://github.com/ukalto/AdventOfCode2020/blob/master/Day2/Day2.java)
 
-* [Day 3](https://github.com/ukalto/AdventOfCode2020/tree/master/Day3)
+* [Day 3](https://github.com/ukalto/AdventOfCode2020/blob/master/Day3/Day3.java)
 
-* [Day 4](https://github.com/ukalto/AdventOfCode2020/tree/master/Day4)
+* [Day 4](https://github.com/ukalto/AdventOfCode2020/blob/master/Day4/Day4.java)
 
 ### Console output
 ```
